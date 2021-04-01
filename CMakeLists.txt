@@ -1,6 +1,6 @@
 # Project definition
 cmake_minimum_required(VERSION 3.1)
-project(Hello-World)
+project(Amon-Gus)
 
 # Source files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/source")
@@ -33,6 +33,9 @@ target_link_libraries(${PROJECT_NAME} "glad" "${CMAKE_DL_LIBS}")
 # glm 
 set(GLM_DIR "${LIB_DIR}/glm")
 target_include_directories(${PROJECT_NAME} PRIVATE "${GLM_DIR}")
+
+#freetype
+target_include_directories(${PROJECT_NAME} PRIVATE "${LIB_DIR}")
 
 # MAC
 include(FindPkgConfig)

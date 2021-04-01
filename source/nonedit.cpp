@@ -173,10 +173,10 @@ struct VAO *create3DObject(GLenum primitive_mode, int numVertices, const GLfloat
     );
 
     glBindBuffer (GL_ARRAY_BUFFER, vao->ColorBuffer); // Bind the VBO colors
-    glBufferData (GL_ARRAY_BUFFER, 3 * numVertices * sizeof(GLfloat), color_buffer_data, GL_STATIC_DRAW); // Copy the vertex colors
+    glBufferData (GL_ARRAY_BUFFER, 4 * numVertices * sizeof(GLfloat), color_buffer_data, GL_STATIC_DRAW); // Copy the vertex colors
     glVertexAttribPointer(
         1,                            // attribute 1. Color
-        3,                            // size (r,g,b)
+        4,                            // size (r,g,b)
         GL_FLOAT,                     // type
         GL_FALSE,                     // normalized?
         0,                            // stride

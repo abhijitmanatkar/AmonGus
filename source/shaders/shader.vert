@@ -2,12 +2,12 @@
 
 // input data : sent from main program
 layout (location = 0) in vec3 vertexPosition;
-layout (location = 1) in vec3 vertexColor;
+layout (location = 1) in vec4 vertexColor;
 
 uniform mat4 MVP;
 
 // output data : used by fragment shader
-out vec3 fragColor;
+out vec4 fragColor;
 
 void main ()
 {
